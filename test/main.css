@@ -1,0 +1,89 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+header{
+    padding: 15px;
+    color: #08C988;
+    font-weight: bold;
+    font-size: 18px;
+    border-bottom: 1px solid #08C988;
+}
+
+section{
+    padding: 15px;
+}
+
+.header{
+    padding: 5px;
+}
+
+.text-center{
+    text-align: center;
+}
+
+label{
+    font-size: 14px;
+    font-weight: 500;
+    background: #DADADA;
+    padding: 5px 10px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+textarea,
+select,
+input{
+    border-radius: 4px;
+    border: 1px solid #c0c0c0;
+}
+
+textarea{
+  resize: none;
+}
+
+select{
+    padding: 6px 12px;
+}
+
+input{
+    padding: 7px 12px;
+}
+
+button{
+    color: #fff;
+    background: #08C988;
+    border-radius: 4px;
+    text-align: center;
+    border: 0;
+    padding: 8px 12px;
+    font-weight: 500;
+    display: inline-block;
+    cursor: pointer;
+}
+
+hr{
+    border-color: #08C988;
+}
+
+#copied-alert{
+    opacity: 0;
+    font-weight: bold;
+    transition: opacity 1s;
+}
+
+#copied-alert.active{
+    opacity: 1;
+}
