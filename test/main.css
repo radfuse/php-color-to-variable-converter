@@ -3,6 +3,9 @@ html, body{
     padding: 0;
 }
 
+html{
+    height: 100%;
+}
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -12,6 +15,8 @@ html, body{
 body{
     font-family: Arial, sans-serif;
     font-size: 14px;
+    background: #eee;
+    min-height: 100%;
 }
 
 header{
@@ -20,6 +25,7 @@ header{
     font-weight: bold;
     font-size: 18px;
     border-bottom: 1px solid #08C988;
+    background: #fff;
 }
 
 section{
@@ -27,7 +33,11 @@ section{
 }
 
 .header{
-    padding: 5px;
+    padding: 5px 10px;
+    background: #DADADA;
+    border: 1px solid #c0c0c0;
+    border-bottom: 0;
+    border-radius: 4px 4px 0 0;
 }
 
 .text-center{
@@ -35,15 +45,9 @@ section{
 }
 
 label{
-    font-size: 14px;
-    font-weight: 500;
-    background: #DADADA;
-    padding: 5px 10px;
-    border-radius: 4px;
-    display: inline-block;
+    font-weight: bold;
 }
 
-textarea,
 select,
 input{
     border-radius: 4px;
@@ -52,6 +56,8 @@ input{
 
 textarea{
   resize: none;
+  border-radius: 0 0 4px 4px;
+  border: 1px solid #c0c0c0;
 }
 
 select{
@@ -86,4 +92,28 @@ hr{
 
 #copied-alert.active{
     opacity: 1;
+}
+
+@media (min-width: 1200px) {
+    .width-20,
+    .width-40{
+        display: block;
+        float: left;
+    }
+    .width-40{
+        width: 40%;
+    }
+    .width-20{
+        width: 20%;
+    }
+
+    select,
+    input,
+    button{
+        width: 100%;
+    }
+
+    textarea{
+        height: 80vh;
+    }
 }

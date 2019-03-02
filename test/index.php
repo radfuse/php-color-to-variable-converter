@@ -26,35 +26,46 @@ $result = $converter->getResult();
         Color to Variable Converter
     </header>
 
-    <section>
-        <form method='post'>
+    <form method='post'>
+        <section class="width-40">
             <div class="header text-center">
-                <label>Original</label>
+                Original
             </div>
             <textarea name='source' style='width: 100%' rows='15'><?= $input ?></textarea>
-
+        </section>
+        
+        <section class="width-20">
             <div class="text-center">
-                <span>Prefix: </span><input type="text" name="prefix" value="<?= $prefix ?>"/>
-                <select name="preprocessor">
-                    <option value="sass" <?= $preprocessor == 'sass' ? 'selected' : '' ?>>SASS</option>
-                    <option value="less" <?= $preprocessor == 'less' ? 'selected' : '' ?>>LESS</option>
-                </select>
-                <button>Convert</button>
+                <p>
+                    <label>Prefix: </label>
+                    <input type="text" name="prefix" value="<?= $prefix ?>"/>
+                </p>
+                <p>
+                    <label>Preprocessor: </label>
+                    <select name="preprocessor">
+                        <option value="sass" <?= $preprocessor == 'sass' ? 'selected' : '' ?>>SASS</option>
+                        <option value="less" <?= $preprocessor == 'less' ? 'selected' : '' ?>>LESS</option>
+                    </select>
+                </p>
+                <p>
+                    <button>Convert</button>
+                </p>
+                <p>
+                    <button onClick="copyToClipboard()">Copy to Clipboard</button>
+                </p>
+                <p>
+                    <span id="copied-alert">Copied!</span>
+                </p>
             </div>
-        </form>
+        </section>
 
-        <hr>
-
-        <div class="header text-center">
-            <label>Converted</label>
-        </div>
-        <textarea style='width: 100%' rows='15' id="result"><?= $result ?></textarea>
-
-        <?php if($input != ''): ?>
-            <button onClick="copyToClipboard()">Copy to Clipboard</button>
-            <span id="copied-alert">Copied!</span>
-        <?php endif ?>
-    </section>
+        <section class="width-40">
+            <div class="header text-center">
+                Converted
+            </div>
+            <textarea style='width: 100%' rows='15' id="result"><?= $result ?></textarea>
+        </section>
+    </form>
 
     <script>
         function copyToClipboard() {
